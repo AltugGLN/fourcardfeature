@@ -1,0 +1,188 @@
+/* RESET */
+
+body {
+    margin: 0; 
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+
+:root {
+    /* ###Primary */
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    
+    /* ### Neutral */
+    --verydarkblue: hsl(234, 12%, 34%);
+    --grayishblue: hsl(229, 6%, 66%);
+    --verylightgray: hsl(0, 0%, 98%);
+}
+
+/* TYPOGRAPHY */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9375rem;  /*15px*/
+}
+
+h1,h2,h3,p {
+    color: var(--verydarkblue);
+}
+
+.main-title {
+    font-weight: 200;
+}
+
+.sub-title {
+    font-weight: 600;
+}
+
+p {
+    font-weight: 200;
+}
+
+/* LAYOUT */
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.card-row {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* STYLE */
+
+body {
+    background-color: var(--verylightgray);
+}
+
+.card-row {
+    background-color: var(--verylightgray);
+}
+
+h1, h2, h3 {    
+    margin: 0;
+}
+
+.header {
+    text-align: center;
+    padding-top: 5em;
+    padding-bottom: 3em;
+}
+
+.sub-title {
+    margin-bottom: 0.7em;
+}
+
+.main-text {
+    margin: 0 auto;
+    width: 50%;
+}
+
+/* CARD STYLE */
+
+.card {
+    margin: 0 1.4em 2em;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: -5px 5px 20px 0px hsl(229, 6%, 66%);;
+
+}
+
+.card-title {
+    margin: 1em 1.7em;
+}
+
+.card-text {
+    margin: 0 2em;
+}
+
+.card-image {
+    align-self: flex-end;
+    margin: 1.2em 2em;
+}
+
+.card::before {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    content:'';
+    height: 0.3em;
+    width: 100%;
+}
+
+.card-one::before {
+    background-color: var(--cyan);
+}
+
+.card-two::before {
+    background-color: var(--red);
+}
+
+.card-three::before {
+    background-color: var(--orange);
+}
+
+.card-four::before {
+    background-color: var(--blue);
+}
+
+footer {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media screen and (min-width:768px) {
+    .row {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+    .card-row {
+        max-width: 30%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .card-image {
+        margin-top: 3em;
+        margin-bottom: 3em;
+    }
+
+
+
+
+}
+
+
+
+
+
